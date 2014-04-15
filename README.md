@@ -22,6 +22,8 @@ If there're no file associated with the front most window or it could not obtain
  1. Download the `Front Most.alfredworkflow` file.
  
  2. Double-click it to install.
+ 
+ 3. Make sure that allow Alfred access  assistive devices in 'System Prefernces -> Security and Privacy -> Assistive Devices'
 
 ### Screenshots:
  
