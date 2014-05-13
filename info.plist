@@ -26,6 +26,22 @@
 				<key>modifiersubtext</key>
 				<string>Reveal file in terminal</string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>59707CA6-943E-4FCD-A512-92432D4843B4</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Copy full path of this file to clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5ACA8B8D-E020-4A91-B984-E180ABFF7712</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy basename of this file to clipboard</string>
+			</dict>
 		</array>
 		<key>CA15248A-E4C4-44BC-9989-EA84CF4485DE</key>
 		<array>
@@ -56,6 +72,21 @@
 			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
 			<string>66FABE79-3672-4DB4-9834-F71C8574AC01</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>[ -d '{query}' ] || { cd "$(dirname '{query}')" &amp;&amp; false; } &amp;&amp; cd '{query}'</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>5243E688-7821-43F0-AD50-5F8659669819</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -111,14 +142,33 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>62</integer>
 				<key>script</key>
-				<string>[ -d '{query}' ] || { cd "$(dirname '{query}')" &amp;&amp; false; } &amp;&amp; cd '{query}'</string>
+				<string>echo -n '{query}' | pbcopy</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>5243E688-7821-43F0-AD50-5F8659669819</string>
+			<string>59707CA6-943E-4FCD-A512-92432D4843B4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>script</key>
+				<string>echo -n "$(basename '{query}')" | pbcopy</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5ACA8B8D-E020-4A91-B984-E180ABFF7712</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -130,22 +180,32 @@
 		<key>5243E688-7821-43F0-AD50-5F8659669819</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>170</real>
+		</dict>
+		<key>59707CA6-943E-4FCD-A512-92432D4843B4</key>
+		<dict>
+			<key>ypos</key>
+			<real>310</real>
+		</dict>
+		<key>5ACA8B8D-E020-4A91-B984-E180ABFF7712</key>
+		<dict>
+			<key>ypos</key>
+			<real>480</real>
 		</dict>
 		<key>66FABE79-3672-4DB4-9834-F71C8574AC01</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>20</real>
 		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
 			<key>ypos</key>
-			<real>30</real>
+			<real>250</real>
 		</dict>
 		<key>CA15248A-E4C4-44BC-9989-EA84CF4485DE</key>
 		<dict>
 			<key>ypos</key>
-			<real>20</real>
+			<real>250</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
