@@ -1,5 +1,7 @@
-front-most-alfred-workflow
+the FrontMost Alfred Workflow
 ==========================
+
+------
 
 Reveal the file open by the front most window in Alfred
 
@@ -9,7 +11,11 @@ You can modify the hotkey and keyword in "Workflow" panel of Alfred Preferences 
 
 Press **Enter** in Alfred file list to open the file with the default application.
 
-Press **⌘ + Enter** in Alfre file list to reveal the file in a new Terminal window/tab.
+Press **⌘ + Enter** in Alfred file list to reveal the file in a new Terminal window/tab.
+
+Press **⇧ + Enter** to copy full path of the file to clipboard.
+
+Press **⌥ + Enter** to copy base name of the file to clipboard.
 
 If there're no file associated with the front most window or it could not obtain the file of the front mose window, then the file list in Alfred.app will be empty.
 
@@ -27,4 +33,8 @@ If there're no file associated with the front most window or it could not obtain
 
 ### Screenshots:
  
-![image](./front_most.gif)
+![](https://lh6.googleusercontent.com/-2jXKneWNELE/U3I4nYkKNGI/AAAAAAAABF8/WiemGbGRAGU/s0/front_most.gif "front_most.gif")
+
+
+
+> Written by [Liu Xiang](mailto:liuxiang921@gmail.com) with [StackEdit](https://stackedit.io/).
